@@ -44,16 +44,16 @@ const playGame =(userChoice) => {
         drawGame();
     }else{
         let userWin = true;
-        if (userChoice === rock){
+        if (userChoice === "rock"){
             // scissors ,rock
-            userWin = compChoice === "paper" ? false :true;
+            userWin = compChoice === "paper" ? false : true ;
         }else if(userChoice === "paper"){
             //rock,scissor
-            userWin = compChoice === "scissors" ? false:true;
+            userWin = compChoice === "scissors" ? false : true ; 
         }
         else{
             // rock,paper
-            userWin = compChoice === "rock" ? false :true;
+            userWin = compChoice === "rock" ? false : true ;
         }
         showWinner(userWin,userChoice,compChoice);
     }
@@ -66,4 +66,5 @@ choices.forEach((choice) => {
         const userChoice = choice.getAttribute("id");
         playGame(userChoice);
 });
+
 });
